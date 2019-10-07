@@ -1,0 +1,29 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+{%block styles%}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{%endblock%}
+{%block content%}
+
+<div class="container">
+    <div class="blog">
+        
+
+        {{wtf.quick_form(form)}}
+
+    </div>
+
+
+</div>
+{%endblock%}
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=El+Messiri&display=swap');
+
+    #view {
+        font-family: 'El Messiri', sans-serif;
+    }
+</style>
